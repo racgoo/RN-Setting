@@ -18,7 +18,7 @@ import {
   LogBox,
 } from 'react-native';
 
-import { StackActions } from '@react-navigation/native';
+import { StackActions, TabActions } from '@react-navigation/native';
 console.disableYellowBox = true;
 
 //api
@@ -76,13 +76,16 @@ import * as WholeNavigation from './Navigations';
 const tabBarListeners = (props) => ({
     tabPress: (event) => {
         event.preventDefault();
-        props.navigation.reset({routes: [{name: event.route.name,params: event.route.params}]});
+        // const action = TabActions.jumpTo(event.target.split("-")[0]);
+        // props.navigation.dispatch(action);
+        // console.log("HiHIHi")
+        props.navigation.reset({routes: [{name: event.target.split("-")[0]}]});
     }
 });
 
 const stackListeners = (props) => ({
     tabPress: (event) => {
-        props.navigation.reset({routes: [{name: event.route.name,params: event.route.params}]});
+        props.navigation.reset({routes: [{name: event.target,params: event.route.params}]});
     }
 });
 
@@ -212,11 +215,11 @@ const HomeStack = ({navigation,routes}) => {
 
     return (
       <NavigationContainer ref={WholeNavigation.TabNavigationRef} independent={true} >
-        <Tab.Navigator initialRouteName="Home" screenListeners={(event)=>{tabBarListeners(event)}} >
+        <Tab.Navigator initialRouteName="Home" backBehavior="none"  >
               <Tab.Screen name={"Home"}  component={HomeStack} options={(optionsProps)=>({...generateDefaultHeaderOption({...optionsProps,title: "Home",unmountOnBlur: true})})}  /> 
-              <Tab.Screen name={"MyApp"} component={MyAppStack} options={(optionsProps)=>({...generateDefaultHeaderOption({...optionsProps,title: "MyApp",unmountOnBlur: true})})}   /> 
-              <Tab.Screen name={"User"} component={UserStack} options={(optionsProps)=>({...generateDefaultHeaderOption({...optionsProps,title: "User",unmountOnBlur: true})})}  /> 
-              <Tab.Screen name={"Setting"} component={SettingStack} options={(optionsProps)=>({...generateDefaultHeaderOption({...optionsProps,title: "Setting",unmountOnBlur: true})})}  />       
+              <Tab.Screen name={"MyApp"} component={MyAppStack} options={(optionsProps)=>({...generateDefaultHeaderOption({...optionsProps,title: "MyApp",unmountOnBlur: true})})} /> 
+              <Tab.Screen name={"User"} component={UserStack} options={(optionsProps)=>({...generateDefaultHeaderOption({...optionsProps,title: "User",unmountOnBlur: true})})} /> 
+              <Tab.Screen name={"Setting"} component={SettingStack} options={(optionsProps)=>({...generateDefaultHeaderOption({...optionsProps,title: "Setting",unmountOnBlur: true})})} />       
         </Tab.Navigator>
       </NavigationContainer>
     )
