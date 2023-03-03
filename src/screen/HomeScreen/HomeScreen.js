@@ -26,7 +26,6 @@ const HomeScreen = (props) => {
 
             <Pressable onPress={handleNavigate} >
                 <Image source={grayCloseIcon} style={{width: 18,height: 18}} />
-                <Text style={{fontFamily: "Pretendard",fontSize: 20}} >English</Text>
                 <Text style={{fontSize: 20}} >한글입니다</Text>
             </Pressable>
 

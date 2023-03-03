@@ -3,7 +3,7 @@ const config = {
         height: 40
     },
     GNB: {
-        height: 80
+        height: 70
     }
 }
 export default config;

@@ -8,6 +8,7 @@ module.exports = {
       "whitelist": null,
       "safe": true,
       "allowUndefined": true
-    }]
+    }],
+    'react-native-reanimated/plugin',
   ]
 };

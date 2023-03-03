@@ -9,12 +9,12 @@
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* socialAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* socialAppTests.m */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
-		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		3131AAAAE04E9C18E6619FC1 /* libPods-socialApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EB9F53443D6E17458E759DF /* libPods-socialApp.a */; };
 		31682E84E68EB525CAE5A59F /* libPods-socialApp-socialAppTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C57F98D1C64A765A36501DC0 /* libPods-socialApp-socialAppTests.a */; };
-		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		A1C43DFBBFA04F35804A8873 /* Pretendard.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 912539816E7E4FE0A6BECAAB /* Pretendard.ttf */; };
+		B01A87B1F90D476D8AE76ABD /* Pretendard.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C411948EF8B843BBAC63AB0D /* Pretendard.ttf */; };
+		E6CFDCF529A888BB00283950 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		E6CFDCF729A888C300283950 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,10 +39,10 @@
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = socialApp/main.m; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = socialApp/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		881A6D28D423405AF8DCD8B4 /* Pods-socialApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-socialApp.release.xcconfig"; path = "Target Support Files/Pods-socialApp/Pods-socialApp.release.xcconfig"; sourceTree = "<group>"; };
-		912539816E7E4FE0A6BECAAB /* Pretendard.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Pretendard.ttf; path = ../src/assets/fonts/Pretendard.ttf; sourceTree = "<group>"; };
 		9EB9F53443D6E17458E759DF /* libPods-socialApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-socialApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A074A7AC88B60D9AD19A4FBF /* Pods-socialApp-socialAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-socialApp-socialAppTests.debug.xcconfig"; path = "Target Support Files/Pods-socialApp-socialAppTests/Pods-socialApp-socialAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B58BA202ABA4CD072748A55F /* Pods-socialApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-socialApp.debug.xcconfig"; path = "Target Support Files/Pods-socialApp/Pods-socialApp.debug.xcconfig"; sourceTree = "<group>"; };
+		C411948EF8B843BBAC63AB0D /* Pretendard.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Pretendard.ttf; path = ../src/assets/fonts/Pretendard.ttf; sourceTree = "<group>"; };
 		C57F98D1C64A765A36501DC0 /* libPods-socialApp-socialAppTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-socialApp-socialAppTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E883B533350162F155AF48FA /* Pods-socialApp-socialAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-socialApp-socialAppTests.release.xcconfig"; path = "Target Support Files/Pods-socialApp-socialAppTests/Pods-socialApp-socialAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
@@ -111,7 +111,7 @@
 		4C76AC935C4B44C9B6F5B018 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				912539816E7E4FE0A6BECAAB /* Pretendard.ttf */,
+				C411948EF8B843BBAC63AB0D /* Pretendard.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -191,10 +191,10 @@
 				FD10A7F022414F080027D42C /* Start Packager */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
-				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
 				BF004FE14E891B8332112C55 /* [CP] Copy Pods Resources */,
 				2A917F61BBB6C5D026F35A1F /* [CP] Embed Pods Frameworks */,
+				E6CFDCF429A888A300283950 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -249,13 +249,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		13B07F8E1A680F5B00A75B9A /* Resources */ = {
+		E6CFDCF429A888A300283950 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
-				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
-				A1C43DFBBFA04F35804A8873 /* Pretendard.ttf in Resources */,
+				E6CFDCF729A888C300283950 /* Images.xcassets in Resources */,
+				E6CFDCF529A888BB00283950 /* LaunchScreen.storyboard in Resources */,
+				B01A87B1F90D476D8AE76ABD /* Pretendard.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

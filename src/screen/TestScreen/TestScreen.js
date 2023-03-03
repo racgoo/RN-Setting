@@ -1,6 +1,7 @@
 import { View, Text, Pressable } from "react-native";
 import { getInnerTabNavigation, getTabNavigation, navigationIterator } from "../../navigation/Navigations";
 import sleep from "../../modules/sleep/sleep";
+import PageLayout from "../../components/PageLayout";
 const TestScreen = ({route,navigation}) => {
     const handleNavigate = () => {
 
@@ -18,9 +19,11 @@ const TestScreen = ({route,navigation}) => {
         // setTimeout(()=>{navigation.reset({routes: [{name: 'Test',params: {hi: 123}}]});},100);
     }
     return (
-        <Pressable onPress={handleNavigate} >
-            <Text>HOEM</Text>
-        </Pressable>
+        <PageLayout>
+            <Pressable onPress={handleNavigate} >
+                <Text>HOEM</Text>
+            </Pressable>
+        </PageLayout>
     );
 }
 export default TestScreen;

@@ -132,7 +132,6 @@ const LoginScreen = ({ navigation }) => {
                 
                 {/* <View style={{width: "100%", height: "100%",justifyContent: "center", alignItems: "center"}}>
                     <Pressable onPress={handleNavigate} >
-                        <Text style={{fontFamily: "Pretendard",fontSize: 20}} >Start</Text>
                         <Text style={{fontSize: 20}} >Splash</Text>
                     </Pressable>
                 </View> */}

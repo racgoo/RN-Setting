@@ -80,9 +80,9 @@ const App = () => {
 
   const statusBarHeight = getStatusBarHeight(true);
 
-  setCustomText({ style: { fontFamily: "Pretendard"}});
   
   useEffect(()=>{
+    // setCustomText({ style: { fontFamily: "Pretendard"}});
     setSystemItem({platform: Platform.OS});
   },[])
 

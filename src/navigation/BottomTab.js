@@ -30,6 +30,9 @@ import colors from '../style/colors';
 //layout
 import config from "../style/config";
 
+//compoment
+import HeaderDrawer from "../components/HeaderDrawer/HeaderDrawer";
+
 //navigation
 import { NavigationContainer, useNavigation,useNavigationContainerRef } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
@@ -172,7 +175,7 @@ const HomeStack = ({navigation,routes}) => {
             tabBarLabel: ({ focused }) => (
                 <Text style={
                     focused
-                        ? { color: "#FF5050" }
+                      ? { color: colors.white }
                         : { color: "gray" }
                 } >
                     {props.title}
@@ -181,11 +184,11 @@ const HomeStack = ({navigation,routes}) => {
             tabBarIcon: ({focused}) => 
                 {
                     return (
-                        <View>
+                        <View style={{width: "100%",display: "flex", flexDirection: "row" ,  justifyContent: "center"}} >
                             <Text 
                                 style={
                                     focused
-                                    ? { color: "#FF5050" }
+                                    ? { color: colors.white }
                                     : { color: "gray" }
                                 }
                             >
@@ -200,14 +203,21 @@ const HomeStack = ({navigation,routes}) => {
                 height: config.GNB.height,
                 paddingBottom: 20,
                 fontSize: 40,
+                backgroundColor: colors.mainColor,
+                borderTopWidth: 0
                 // display: "none"
             },
     
-            headerTitle: ({children}) => <View className="flex-row justify-center item-center" ><Text style={{color: "green"}}>{children}</Text></View>,
+            // headerTitle: ({children}) => <View  style={{width: '100%', display: "flex", flexDirecntion: "row", justifyContent: "center"}} ><Text style={{color: colors.white}}>{children}</Text></View>,
+            headerTitle: ({children}) => <HeaderDrawer />,
+            headerTitleAlign: "left",
             headerStyle: { 
-            backgroundColor: "#FFFFFF",
-            maxHeiht: config.header.height+statusBarHeight,
-            height: config.header.height+statusBarHeight,
+              backgroundColor: colors.mainColor,
+              maxHeiht: config.header.height+statusBarHeight,
+              height: config.header.height+statusBarHeight,
+              borderBottomWidth: 0,
+              borderWidth: 0,
+              shadowColor: "transparent"
             },
             style: {backgroundColor: ""},
         }   
@@ -215,7 +225,7 @@ const HomeStack = ({navigation,routes}) => {
 
     return (
       <NavigationContainer ref={WholeNavigation.TabNavigationRef} independent={true} >
-        <Tab.Navigator initialRouteName="Home" backBehavior="none"  >
+        <Tab.Navigator initialRouteName="Home" backBehavior="none"   >
               <Tab.Screen name={"Home"}  component={HomeStack} options={(optionsProps)=>({...generateDefaultHeaderOption({...optionsProps,title: "Home",unmountOnBlur: true})})}  /> 
               <Tab.Screen name={"MyApp"} component={MyAppStack} options={(optionsProps)=>({...generateDefaultHeaderOption({...optionsProps,title: "MyApp",unmountOnBlur: true})})} /> 
               <Tab.Screen name={"User"} component={UserStack} options={(optionsProps)=>({...generateDefaultHeaderOption({...optionsProps,title: "User",unmountOnBlur: true})})} /> 
